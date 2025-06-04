@@ -141,13 +141,19 @@ export default function Home() {
                         </FloatingIcon>
                     </div>
                 </div>
-                <div className="bg-[#F8FFF9] w-full mt-9 z-10"> 
-                    <div className="container py-8 mx-auto flex justify-center items-center p-4 gap-20">
-                    <img src="/assets/google-logo.png" alt="" className="max-w-26"/>
-                    <img src="/assets/trello-logo.png" alt="" className="max-w-26"/>
-                    <img src="/assets/monday-logo.png" alt="" className="max-w-26"/>
-                    <img src="/assets/notion-logo.png" alt="" className="max-w-26"/>
-                    <img src="/assets/slack-logo.png" alt="" className="max-w-26"/>
+                <div className="bg-[#F8FFF9] w-full mt-9 z-10 slider-container"> 
+                    <div className="slider-track py-2">
+                        <img src="/assets/evos+-logo.png" alt="" className="max-w-26"/>
+                        <img src="/assets/arhan-logo.png" alt="" className="max-w-50"/>
+                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-50"/>
+                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-35"/>
+
+                        <img src="/assets/evos+-logo.png" alt="" className="max-w-26"/>
+                        <img src="/assets/arhan-logo.png" alt="" className="max-w-50"/>
+                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-50"/>
+                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-35"/>
+
+                        <div style={{ width: '20px', flexShrink: 0 }} aria-hidden="true"></div>
                     </div>
                 </div>
             </Section>
