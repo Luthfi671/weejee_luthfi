@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#F3B033] text-black pt-16 pb-8">
       <div className="container mx-auto px-15">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
-          <div>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+          <div className="col-span-2 md:col-span-1">
             <img src="/assets/logo2.png" alt="logo weejee" className='max-w-[150px] cursor-pointer mb-4'/>
             <p className="mb-6">
             Revolutionize your business through Our Custom Software Development Services-bespoke solutions designed to enchance efficiency and faster growth!
@@ -31,7 +31,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="mx-auto">
+          <div className="md:mx-auto">
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="#" className="hover:text-white transition-colors">Home</a></li>

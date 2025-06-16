@@ -9,6 +9,33 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+const portfolioItems = [
+    {
+      title: "Digital Marketing Agency Website",
+      description:
+        "This is a website for a client who wants to achieve their goals and meet their users' needs while also increasing their reach across all platforms. This is a website rebrand.",
+      image: "/assets/porto-1.png",
+    },
+    {
+      title: "E-Commerce Platform",
+      description:
+        "A robust platform for selling products with secure payment gateways and inventory management.",
+      image: "/assets/porto-2.png",
+    },
+    {
+      title: "Corporate Branding Website",
+      description:
+        "Helping brands represent their vision and values clearly through a modern web presence.",
+      image: "/assets/porto-3.png",
+    },
+    {
+      title: "Startup Landing Page",
+      description:
+        "A fast, responsive, and beautiful landing page that helps startups acquire users quickly.",
+      image: "/assets/porto-4.png",
+    },
+  ];
+
 const testimonials = [
     {
       message:
@@ -69,13 +96,19 @@ const FloatingIcon = ({ children, className, style, delay = 0 }) => {
 export default function Home() {
 
     const swiperRef = useRef(null);
-
     const handlePrev = () => {
       if (swiperRef.current) swiperRef.current.slidePrev();
     };
-    
     const handleNext = () => {
       if (swiperRef.current) swiperRef.current.slideNext();
+    };
+
+    const swiperRef2 = useRef(null);
+    const handlePrev2 = () => {
+      if (swiperRef2.current) swiperRef2.current.slidePrev();
+    };
+    const handleNext2 = () => {
+      if (swiperRef2.current) swiperRef2.current.slideNext();
     };
 
     return (
@@ -84,27 +117,27 @@ export default function Home() {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></link>
             <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
 
-            <Section id="home" className="bg-[#f4b033] px-0 pt-20 pb-8">
+            <Section id="home" className="bg-[#f4b033] px-0 pt-20 pb-0">
                 <div className="grid lg:grid-cols-2 items-center gap-12 max-w-7xl mx-auto">
                     {/* Text Content */}
                     <div className="space-y-6 px-15">
-                        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                            Seemless <br className="hidden md:block" />
+                        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-center md:text-left">
+                            Seemless
                             Service <br />
                             <span className="">Solution</span>
                         </h1>
-                        <p className="text-xl max-w-xl">
+                        <p className="text-center md:text-left text-sm max-w-xl">
                             We craft exceptional websites, robust systems, and innovative mobile applications that help businesses thrive in the digital landscape.
                         </p>
-                        <div className="flex gap-4 flex-wrap">
-                            <button className="flex bg-orange-500 text-white text-xl px-6 py-4 rounded-xl font-semibold hover:bg-orange-600 transition cursor-pointer">
+                        <div className="w-full flex justify-center md:justify-start">
+                            <button className=" bg-orange-500 text-white text-sm md:text-xl px-4 md:px-6 py-2 md:py-4 rounded-xl font-semibold hover:bg-orange-600 transition cursor-pointer">
                             Get Started
                             </button>
                         </div>
                     </div>
 
                     {/* Hero Image */}
-                    <div className="relative top-13">
+                    <div className="relative top-13 ml-4 md:ml-0">
                         <img src="/assets/background_header.png" alt="Hero Illustration" className="w-full max-w-md lg:max-w-full mx-auto"/>
                         <FloatingIcon className="left-[20%] top-[10%]" delay={0}>
                             <div className='bg-[#FF8345] text-white rotate-20 text-2xl z-20 w-11 h-11 justify-center items-center flex rounded-lg '>
@@ -141,17 +174,17 @@ export default function Home() {
                         </FloatingIcon>
                     </div>
                 </div>
-                <div className="bg-[#F8FFF9] w-full mt-9 z-10 slider-container"> 
-                    <div className="slider-track py-2">
-                        <img src="/assets/evos+-logo.png" alt="" className="max-w-26"/>
-                        <img src="/assets/arhan-logo.png" alt="" className="max-w-50"/>
-                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-50"/>
-                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-35"/>
+                <div className="bg-white w-full mt-9 z-10 slider-container"> 
+                    <div className="slider-track py-7 gap-20 md:gap-40">
+                        <img src="/assets/evos+-logo.png" alt="" className="max-w-15 md:max-w-26"/>
+                        <img src="/assets/arhan-logo.png" alt="" className="max-w-39 md:max-w-50"/>
+                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-39 md:max-w-50"/>
+                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-24 md:max-w-35"/>
 
-                        <img src="/assets/evos+-logo.png" alt="" className="max-w-26"/>
-                        <img src="/assets/arhan-logo.png" alt="" className="max-w-50"/>
-                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-50"/>
-                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-35"/>
+                        <img src="/assets/evos+-logo.png" alt="" className="max-w-15 md:max-w-26"/>
+                        <img src="/assets/arhan-logo.png" alt="" className="max-w-39 md:max-w-50"/>
+                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-39 md:max-w-50"/>
+                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-24 md:max-w-35"/>
 
                         <div style={{ width: '20px', flexShrink: 0 }} aria-hidden="true"></div>
                     </div>
@@ -159,13 +192,13 @@ export default function Home() {
             </Section>
 
             <Section id="what_we_do" className="py-10">
-                <div className="container mx-auto px-15">
+                <div className="container mx-auto px-8 md:px-15">
                     <div data-aos="fade-up" className="mb-12">
-                        <h5 className="uppercase text-lg font-semibold text-[#F55F1D] mb-4">What we do</h5>
-                        <p className="text-2xl font-bold max-w-95">We provide the Perfect Solution to your business growth</p>
+                        <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">What we do</h5>
+                        <p className="text-2xl text-center md:text-left font-bold md:max-w-95">We provide the Perfect Solution to your business growth</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div data-aos="fade-up" data-aos-delay="150" className="group bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
+                        <div data-aos="fade-up" data-aos-delay="150" className="group border-1 md:border-0 bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                             {/* Ganti dengan ikon sesuai kebutuhan */}
                             <div className="rounded-2xl bg-[#F5E9D7] w-20 h-20 flex items-center justify-center">
@@ -181,7 +214,7 @@ export default function Home() {
                                 </div>
                             </button>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="300" className="group bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
+                        <div data-aos="fade-up" data-aos-delay="300" className="group border-1 md:border-0 bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                             {/* Ganti dengan ikon sesuai kebutuhan */}
                             <div className="rounded-2xl bg-[#F5E9D7] w-20 h-20 flex items-center justify-center">
@@ -197,7 +230,7 @@ export default function Home() {
                                 </div>
                             </button>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="450" className="group bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
+                        <div data-aos="fade-up" data-aos-delay="450" className="group border-1 md:border-0 bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                             {/* Ganti dengan ikon sesuai kebutuhan */}
                             <div className="rounded-2xl bg-[#F5E9D7] w-20 h-20 flex items-center justify-center">
@@ -218,94 +251,46 @@ export default function Home() {
             </Section>
                 
             <Section id="4_icon" className='px-0'>
-            <div className="bg-[#FDEDD0] py-20 w-full">
-                <div className="max-w-6xl mx-auto px-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
-                    <div data-aos="fade-up" data-aos-delay="150" className="flex flex-col items-center border-r last:border-none border-[#C4C4C480] px-4 py-10">
+            <div className="bg-[#FDEDD0] py-10 md:py-20 w-full">
+                <div className="max-w-6xl mx-auto px-20 md:px-40 grid grid-cols-2 gap-y-0 gap-20 md:gap-0 md:grid-cols-4 text-center">
+                    <div data-aos="fade-up" data-aos-delay="150" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="ri-file-settings-line text-6xl mb-2"></i>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Completed Projects</h3>
-                        <p className="text-[#F55F1D] font-bold text-3xl">
+                        <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">
                         {/* <AnimatedNumbers
                             animateToNumber={1400}
                             configs={() => ({ mass: 1.5, tension: 60, friction: 30 })}
                             /> */}
-                        <CountUp end={1400} duration={8} />
+                        <CountUp end={4} duration={8} />
                          +</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300" className="flex flex-col items-center border-r last:border-none border-[#C4C4C480] px-4 py-10">
+                    <div data-aos="fade-up" data-aos-delay="300" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="ri-team-line text-6xl mb-2"></i>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Customer Satisfaction</h3>
-                        <p className="text-[#F55F1D] font-bold text-3xl"><CountUp end={20} duration={8} delay={1} /> %</p>
+                        <p className="text-[#F55F1D] font-bold text-xl md:text-3xl"><CountUp end={50} duration={8} delay={1} /> %</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="450"className="flex flex-col items-center border-r last:border-none border-[#C4C4C480] px-4 py-10">
+                    <div data-aos="fade-up" data-aos-delay="450"className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="bi bi-cash-coin text-6xl mb-2"></i>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Raised by Clients</h3>
-                        <p className="text-[#F55F1D] font-bold text-3xl">$<CountUp end={10} duration={8} delay={1} />M</p>
+                        <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">$<CountUp end={20} duration={8} delay={1} />M</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="600" className="flex flex-col items-center border-r last:border-none border-[#C4C4C480] px-4 py-10">
+                    <div data-aos="fade-up" data-aos-delay="600" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="bi bi-calendar2-week text-6xl mb-2"></i>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Years in Business</h3>
-                        <p className="text-[#F55F1D] font-bold text-3xl"><CountUp end={2} duration={8} delay={1} /> yrs</p>
+                        <p className="text-[#F55F1D] font-bold text-xl md:text-3xl"><CountUp end={1} duration={8} delay={1} /> yrs</p>
                     </div>
                 </div>
             </div>
             </Section>
 
-            <Section id="our_portfolio" className='px-15'>
-                <div className="p-6 pt-0 md:p-12 md:pt-0">
+            <Section id="our_portfolio" className='px-10 md:px-15'>
+                <div className="px-6 pt-0 pb-0 md:p-12 md:pb-0 md:pt-0 w-full flex flex-col md:flex-row md:justify-between">
                     <div data-aos="fade-up" data-aos-offset="200" className="mb-12">
-                        <h5 className="uppercase text-lg font-semibold text-[#F55F1D] mb-4">Our Portfolio</h5>
-                        <p className="text-2xl font-bold max-w-95">We provide the Perfect Solution to your business growth</p>
+                        <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">Our Portfolio</h5>
+                        <p className="text-2xl text-center md:text-left font-bold max-w-95">We provide the Perfect Solution to your business growth</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-10">
-                        <div data-aos="fade-up" data-aos-delay="150" data-aos-offset="200" className="space-y-4">
-                            <img src='/assets/porto-1.png' className="shadow-md w-full object-cover"/>
-                            <h2 className="text-2xl font-bold">
-                                Digital Marketing Agency Website
-                            </h2>
-                            <p className="mr-10">
-                                This is a website for a client who want to achieve their goals and meet their users needs while also increasing their reach. Accross all platforms. This is a website rebrand
-                            </p>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="space-y-4">
-                            <img src='/assets/porto-2.png' className="shadow-md w-full object-cover"/>
-                            <h2 className="text-2xl font-bold">
-                                Digital Marketing Agency Website
-                            </h2>
-                            <p className="mr-10">
-                                This is a website for a client who want to achieve their goals and meet their users needs while also increasing their reach. Accross all platforms. This is a website rebrand
-                            </p>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="150" data-aos-offset="200" className="space-y-4">
-                            <img src='/assets/porto-3.png' className="shadow-md w-full object-cover"/>
-                            <h2 className="text-2xl font-bold">
-                                Digital Marketing Agency Website
-                            </h2>
-                            <p className="mr-10">
-                                This is a website for a client who want to achieve their goals and meet their users needs while also increasing their reach. Accross all platforms. This is a website rebrand
-                            </p>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="space-y-4">
-                            <img src='/assets/porto-4.png' className="shadow-md w-full object-cover"/>
-                            <h2 className="text-2xl font-bold">
-                                Digital Marketing Agency Website
-                            </h2>
-                            <p className="mr-10">
-                                This is a website for a client who want to achieve their goals and meet their users needs while also increasing their reach. Accross all platforms. This is a website rebrand
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </Section>
-
-            <Section id="testimoni" className="px-4 md:px-15">
-                <div data-aos="fade-up" data-aos-offset="200" className="flex justify-between items-center w-full p-12 pb-4">
-                    <div>
-                        <h5 className="uppercase text-lg font-semibold text-[#F55F1D] mb-4">TESTIMONIALS</h5>
-                        <p className="text-2xl font-semibold max-w-95">
-                            See what our customers <br /> say about us
-                        </p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-offset="-100" className="flex items-center gap-3 ml-4 ">
+                    
+                    <div data-aos="fade-up" data-aos-offset="-100" className="flex justify-center gap-3 mb-5 md:mb-0 md:ml-4 ">
                         <button
                             onClick={handlePrev}
                             className="w-14 h-14 border border-black rounded-full flex items-center justify-center text-xl cursor-pointer"
@@ -314,6 +299,66 @@ export default function Home() {
                         </button>
                         <button
                             onClick={handleNext}
+                            className="w-14 h-14 bg-orange-300 rounded-full flex items-center justify-center text-xl text-white cursor-pointer"
+                        >
+                            <i className="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+                <div className="w-full md:p-12 pt-0">
+                    <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    slidesPerGroup={1}
+                    loop={true}
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
+                    }}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper;
+                    }}
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    >
+                    {portfolioItems.map((item, index) => (
+                        <SwiperSlide key={index} className='w-full'>
+                        <div className="space-y-4 border-1 md:border-0 rounded-2xl py-4 px-4 md:shadow- bg-white h-full">
+                            <img
+                            src={item.image}
+                            alt={item.title}
+                            className="shadow-md rounded-2xl w-80 h-60 object-cover mx-auto"
+                            />
+                            <h2 className="text-2xl font-bold w-full text-center md:text-left">
+                            {item.title}
+                            </h2>
+                            <p className="text-center w-full md:text-left">{item.description}</p>
+                        </div>
+                        </SwiperSlide>
+                    ))}
+                    </Swiper>
+                </div>
+            </Section>
+
+            <Section id="testimoni" className="px-4 md:px-15">
+                <div data-aos="fade-up" data-aos-offset="200" className="flex flex-col md:flex-row justify-between items-center w-full p-12 pb-4">
+                    <div>
+                        <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">TESTIMONIALS</h5>
+                        <p className="text-2xl text-center md:text-left font-semibold max-w-95">
+                            See what our customers <br /> say about us
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-offset="-100" className="flex items-center mt-5 md:mt-0 gap-3 md:ml-4 ">
+                        <button
+                            onClick={handlePrev2}
+                            className="w-14 h-14 border border-black rounded-full flex items-center justify-center text-xl cursor-pointer"
+                        >
+                            <i className="ri-arrow-left-line"></i>
+                        </button>
+                        <button
+                            onClick={handleNext2}
                             className="w-14 h-14 bg-orange-300 rounded-full flex items-center justify-center text-xl text-white cursor-pointer"
                         >
                             <i className="ri-arrow-right-line"></i>
@@ -329,7 +374,7 @@ export default function Home() {
                         slidesPerGroup={1}
                         loop={true}
                         onSwiper={(swiper) => {
-                        swiperRef.current = swiper;
+                        swiperRef2.current = swiper;
                         }}
                         breakpoints={{
                         0: { slidesPerView: 1 },
@@ -366,7 +411,7 @@ export default function Home() {
                 <div className="items-center w-full p-12 pb-4 mb-30">
                     <div data-aos="fade-up" data-aos-delay="150" className='text-center'>
                         <h5 className="uppercase text-xl font-semibold text-[#F55F1D] mb-4">SUBSCRIBE</h5>
-                        <p className="text-4xl font-semibold mb-2">
+                        <p className="text-lg md:text-4xl font-semibold mb-2">
                             Subscribe to get the latest<br />
                             news about us
                         </p>
@@ -374,11 +419,11 @@ export default function Home() {
                             Please drop your email below to get daily update about what we do
                         </span>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="-25" className="relative w-full max-w-xl mx-auto mt-10">
+                    <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="-25" className="text-sm md:text-md relative w-full max-w-xl mx-auto mt-10">
                         <input
                             type="email"
                             placeholder="Enter Your Email Adress"
-                            className="w-full px-5 py-4 pr-36 border border-black-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
+                            className="w-full px-5 py-4 pr-32 border border-black-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-black"
                         />
                         <button
                             type="submit"
@@ -389,101 +434,6 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-        
-            {/* <Section id="get-started" className="py-20">
-                <div className="container mx-auto px-6">
-                    <div data-aos="fade-up" className="text-center mb-12">
-                        <h3 className="text-3xl font-bold text-gray-800 mb-2">Get In Touch</h3>
-                        <p className="text-gray-700">Ready to start your project? Contact us today and let's discuss how we can help you achieve your digital goals.</p>
-                    </div>
-                    <div class="flex flex-col md:flex-row gap-12">
-                        <div data-aos="fade-up" data-aos-delay="150" class="w-full md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-md animate-on-scroll visible">
-                            <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
-                            <form id="contact-form">
-                                <div class="mb-6">
-                                    <label for="name" class="block text-gray-700 mb-2">Full Name</label>
-                                    <input type="text" id="name" class="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="John Smith"/>
-                                </div>
-                                <div class="mb-6">
-                                    <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                                    <input type="email" id="email" class="bg-white w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="john@example.com"/>
-                                </div>
-                                <div class="mb-6">
-                                    <label for="project-type" class="block text-gray-700 mb-2">Project Type</label>
-                                    <div class="relative">
-                                        <div class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary flex justify-between items-center cursor-pointer" id="project-type-display">
-                                            <span>Select Project Type</span>
-                                            <div class="w-5 h-5 flex items-center justify-center">
-                                                <i class="ri-arrow-down-s-line"></i>
-                                            </div>
-                                        </div>
-                                        <div class="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded shadow-md z-10 hidden" id="project-type-dropdown">
-                                            <div class="py-2 px-4 hover:bg-gray-100 cursor-pointer" data-value="website">Website Development</div>
-                                            <div class="py-2 px-4 hover:bg-gray-100 cursor-pointer" data-value="system">System Development</div>
-                                            <div class="py-2 px-4 hover:bg-gray-100 cursor-pointer" data-value="mobile">Mobile App Development</div>
-                                            <div class="py-2 px-4 hover:bg-gray-100 cursor-pointer" data-value="other">Other</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-6">
-                                    <label for="message" class="block text-gray-700 mb-2">Message</label>
-                                    <textarea id="message" rows="5" class="bg-white w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Tell us about your project..."></textarea>
-                                </div>
-                                <button type="submit" class="w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Submit Message</button>
-                            </form>
-                        </div>
-                        <div data-aos="fade-up" data-aos-delay="300" class="w-full md:w-1/2 animate-on-scroll visible" data-delay="200">
-                            <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
-                                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-                                <div class="flex items-start mb-6">
-                                    <div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                                        <i class="ri-mail-line text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-gray-900">Email Us</h4>
-                                        <a href="mailto:info@weejee.com" class="text-gray-600 hover:text-primary">info@weejee.com</a>
-                                    </div>
-                                </div>
-                                <div class="flex items-start mb-6">
-                                    <div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                                        <i class="ri-phone-line text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-gray-900">Call Us</h4>
-                                        <a href="tel:+1234567890" class="text-gray-600 hover:text-primary">+1 (234) 567-890</a>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center mr-4">
-                                        <i class="ri-map-pin-line text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-gray-900">Visit Us</h4>
-                                        <p class="text-gray-600">123 Tech Avenue, San Francisco, CA 94107</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                                <h3 class="text-2xl font-semibold mb-6">Follow Us</h3>
-                                <div class="flex space-x-4">
-                                    <a href="#" class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors">
-                                        <i class="ri-facebook-fill"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors">
-                                        <i class="ri-twitter-fill"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors">
-                                        <i class="ri-instagram-fill"></i>
-                                    </a>
-                                    <a href="#" class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors">
-                                        <i class="ri-linkedin-fill"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </Section> */}
             
         </main>
     );

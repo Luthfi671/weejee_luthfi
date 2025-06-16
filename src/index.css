@@ -30,7 +30,6 @@
   
   .slider-track {
     display: flex;
-    gap: 130px; /* Jarak antar logo */
     width: max-content;
     animation: scrollRight 10s linear infinite;
     will-change: transform;
