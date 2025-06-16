@@ -126,7 +126,7 @@ export default function Home() {
                             Service <br />
                             <span className="">Solution</span>
                         </h1>
-                        <p className="text-center md:text-left text-sm max-w-xl">
+                        <p className="text-center md:text-left text-sm md:text-xl max-w-xl">
                             We craft exceptional websites, robust systems, and innovative mobile applications that help businesses thrive in the digital landscape.
                         </p>
                         <div className="w-full flex justify-center md:justify-start">
