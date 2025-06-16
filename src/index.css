@@ -1,10 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import "tailwindcss";
-@font-face {
-    font-family: 'MyFont';
-    src: url('/fonts/Coconut Kids.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;

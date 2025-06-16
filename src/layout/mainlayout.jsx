@@ -30,6 +30,7 @@ export default function MainLayout() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></link>
         <main className="flex-grow">
           <Outlet />
         </main>

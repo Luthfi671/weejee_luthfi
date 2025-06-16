@@ -2,12 +2,12 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}", // Sesuaikan dengan project kamu
   ],
   theme: {
     extend: {
       fontFamily: {
-        myfont: ['MyFont', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },

@@ -366,10 +366,10 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="w-full p-12">
+                <div className="w-full p-12 overflow-visible">
                     <Swiper
                         modules={[Navigation]}
-                        spaceBetween={20}
+                        spaceBetween={30}
                         slidesPerView={3}
                         slidesPerGroup={1}
                         loop={true}
@@ -386,7 +386,7 @@ export default function Home() {
                         data-aos-offset="200"
                     >
                         {testimonials.map((t, index) => (
-                        <SwiperSlide key={index} className="py-3">
+                        <SwiperSlide key={index} className="py-3 px-2 overflow-visible">
                             <div className="shadow-md rounded-2xl p-6 bg-white h-full">
                                 <p className="text-sm text-gray-700 mb-4">{t.message}</p>
                                 <div className="flex items-center gap-4">
