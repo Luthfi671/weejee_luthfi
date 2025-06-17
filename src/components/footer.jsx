@@ -44,14 +44,14 @@ export default function Footer() {
           </div>
           <div className="mx-auto">
             <h3 className="text-lg font-semibold mb-6">Address</h3>
-            <p className="mb-6 font-semibold">
+            <p className="mb-6">
               Weejee Studio Head Office. <br />
               Damansara <br />
               Malaysia
             </p>
           </div>
         </div>
-        <div className="font-bold border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm mb-4 md:mb-0">Copyright Weejee Studio 2025</p>
         </div>
       </div>

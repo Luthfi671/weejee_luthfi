@@ -14,25 +14,25 @@ const portfolioItems = [
       title: "Digital Marketing Agency Website",
       description:
         "This is a website for a client who wants to achieve their goals and meet their users' needs while also increasing their reach across all platforms. This is a website rebrand.",
-      image: "/assets/porto-1.png",
+      image: "/assets/Portofolio/Evos+2.png",
     },
     {
       title: "E-Commerce Platform",
       description:
         "A robust platform for selling products with secure payment gateways and inventory management.",
-      image: "/assets/porto-2.png",
+      image: "/assets/Portofolio/kongsiniaga1.png",
     },
     {
       title: "Corporate Branding Website",
       description:
         "Helping brands represent their vision and values clearly through a modern web presence.",
-      image: "/assets/porto-3.png",
+      image: "/assets/Portofolio/kongsiniaga2.png",
     },
     {
       title: "Startup Landing Page",
       description:
         "A fast, responsive, and beautiful landing page that helps startups acquire users quickly.",
-      image: "/assets/porto-4.png",
+      image: "/assets/Portofolio/hubitat.png",
     },
   ];
 
@@ -250,7 +250,7 @@ export default function Home() {
                 </div>
             </Section>
                 
-            <Section id="4_icon" className='px-0'>
+            <Section id="archivement" className='px-0'>
             <div className="bg-[#FDEDD0] py-10 md:py-20 w-full">
                 <div className="max-w-6xl mx-auto px-20 md:px-40 grid grid-cols-2 gap-y-0 gap-20 md:gap-0 md:grid-cols-4 text-center">
                     <div data-aos="fade-up" data-aos-delay="150" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
@@ -272,7 +272,7 @@ export default function Home() {
                     <div data-aos="fade-up" data-aos-delay="450"className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="bi bi-cash-coin text-6xl mb-2"></i>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Raised by Clients</h3>
-                        <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">$<CountUp end={20} duration={8} delay={1} />M</p>
+                        <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">$<CountUp end={20} duration={8} delay={1} />K</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="600" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="bi bi-calendar2-week text-6xl mb-2"></i>
@@ -305,7 +305,7 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-                <div className="w-full md:p-12 pt-0">
+                <div className="w-full md:p-12 md:pt-0 pt-0">
                     <Swiper
                     modules={[Navigation]}
                     spaceBetween={20}
@@ -315,7 +315,7 @@ export default function Home() {
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
+                        1024: { slidesPerView: 2 },
                     }}
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper;
@@ -325,12 +325,14 @@ export default function Home() {
                     >
                     {portfolioItems.map((item, index) => (
                         <SwiperSlide key={index} className='w-full'>
-                        <div className="space-y-4 border-1 md:border-0 rounded-2xl py-4 px-4 md:shadow- bg-white h-full">
+                        <div className="space-y-4 border-1 lg:border-0 md:border-0 rounded-2xl py-4 pt-0 px-4 bg-white h-full">
+                            <div className='flex items-center rounded-2xl w-full h-60 lg:h-80 lg:p-2 object-cover mx-auto'>
                             <img
                             src={item.image}
                             alt={item.title}
-                            className="shadow-md rounded-2xl w-80 h-60 object-cover mx-auto"
+                            className="shadow-md max-w-full lg:max-w-full max-h-full lg:max-h-76 pt-2 lg:p-2 rounded-2xl mx-auto"
                             />
+                            </div>
                             <h2 className="text-2xl font-bold w-full text-center md:text-left">
                             {item.title}
                             </h2>
