@@ -138,21 +138,21 @@ export default function Home() {
 
                     {/* Hero Image */}
                     <div className="relative top-13 ml-4 md:ml-0">
-                        <img src="/assets/background_header.png" alt="Hero Illustration" className="w-full max-w-md lg:max-w-full mx-auto"/>
+                        <img src="/assets/Header_Lady_(2).png" alt="Hero Illustration" className="max-h-70 md:max-h-110 lg:max-w-full mx-auto mr-22 md:mr-60 lg:mr-45"/>
                         <FloatingIcon className="left-[20%] top-[10%]" delay={0}>
-                            <div className='bg-[#FF8345] text-white rotate-20 text-2xl z-20 w-11 h-11 justify-center items-center flex rounded-lg '>
+                            <div className='bg-[#FF8345] text-white rotate-20 text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg '>
                                 <i class="ri-star-line"></i>
                             </div>
                         </FloatingIcon>
 
                         <FloatingIcon className="left-[60%] top-[20%]" delay={0.5}>
-                            <div className='bg-[#48B774] text-white text-2xl z-20 w-11 h-11 justify-center items-center flex rounded-lg'>
+                            <div className='bg-[#48B774] text-white  text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg'>
                                 <i class="ri-checkbox-line"></i>
                             </div>
                         </FloatingIcon>
 
                         <FloatingIcon className="left-[10%] top-[80%]" delay={0.5}>
-                            <div className='bg-[#48B774] text-white -rotate-50 text-2xl z-20 w-11 h-11 justify-center items-center flex rounded-lg'>
+                            <div className='bg-[#48B774] text-white -rotate-50 text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg'>
                                 <i class="ri-briefcase-line"></i>
                             </div>
                         </FloatingIcon>
