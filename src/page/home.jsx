@@ -290,7 +290,7 @@ export default function Home() {
                         <p className="text-2xl text-center md:text-left font-bold max-w-95">We provide the Perfect Solution to your business growth</p>
                     </div>
                     
-                    <div data-aos="fade-up" data-aos-offset="-100" className="flex justify-center gap-3 mb-5 md:mb-0 md:ml-4 ">
+                    <div data-aos="fade-up" data-aos-offset="-100" className="flex justify-center items-end gap-3 mb-5 md:mb-0 md:ml-4 ">
                         <button
                             onClick={handlePrev}
                             className="w-14 h-14 border border-black rounded-full flex items-center justify-center text-xl cursor-pointer"
@@ -299,7 +299,7 @@ export default function Home() {
                         </button>
                         <button
                             onClick={handleNext}
-                            className="w-14 h-14 bg-orange-300 rounded-full flex items-center justify-center text-xl text-white cursor-pointer"
+                            className="w-14 h-14 bg-[#f4b033] rounded-full flex items-center justify-center text-xl text-white cursor-pointer"
                         >
                             <i className="ri-arrow-right-line"></i>
                         </button>
@@ -352,7 +352,7 @@ export default function Home() {
                             See what our customers <br /> say about us
                         </p>
                     </div>
-                    <div data-aos="fade-up" data-aos-offset="-100" className="flex items-center mt-5 md:mt-0 gap-3 md:ml-4 ">
+                    <div data-aos="fade-up" data-aos-offset="-100" className="flex items-end mt-5 md:mt-0 gap-3 md:ml-4 ">
                         <button
                             onClick={handlePrev2}
                             className="w-14 h-14 border border-black rounded-full flex items-center justify-center text-xl cursor-pointer"
@@ -361,14 +361,14 @@ export default function Home() {
                         </button>
                         <button
                             onClick={handleNext2}
-                            className="w-14 h-14 bg-orange-300 rounded-full flex items-center justify-center text-xl text-white cursor-pointer"
+                            className="w-14 h-14 bg-[#f4b033] rounded-full flex items-center justify-center text-xl text-white cursor-pointer"
                         >
                             <i className="ri-arrow-right-line"></i>
                         </button>
                     </div>
                 </div>
 
-                <div className="w-full p-12 overflow-visible">
+                <div className="w-full p-12 pt-0 overflow-visible">
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={30}
