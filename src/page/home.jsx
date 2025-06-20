@@ -333,7 +333,7 @@ export default function Home() {
                             className="shadow-md max-w-full lg:max-w-full max-h-full lg:max-h-76 pt-2 lg:p-2 rounded-2xl mx-auto"
                             />
                             </div>
-                            <h2 className="text-2xl font-bold w-full text-center md:text-left">
+                            <h2 className="text-2xl w-full font-bold text-center">
                             {item.title}
                             </h2>
                             <p className="text-center w-full md:text-left">{item.description}</p>
