@@ -34,13 +34,13 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[#f4b033] text-black shadow z-50">
-      <nav className="container mx-auto flex justify-between items-center p-4 px-10">
+      <nav className="container mx-auto flex justify-between items-center p-4 px-5">
         <button onClick={() => scrollToSection('home')} className="">
           <img src="/assets/logo2.png" alt="logo weejee" className='max-w-[150px] cursor-pointer'/>
         </button>
 
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-black text-xl">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white text-xl">
             <i className={menuOpen ? "ri-close-line" : "ri-menu-line"}></i>
           </button>
         </div>

@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Section from '../components/section';
 import CountUp from 'react-countup';
 import AnimatedNumbers from "react-animated-numbers";
 import { motion, AnimatePresence } from 'framer-motion';
+import TypeIt from "typeit";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -95,6 +96,42 @@ const FloatingIcon = ({ children, className, style, delay = 0 }) => {
 
 export default function Home() {
 
+    const heroRef = useRef(null);
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 0.5; // atur jadi lambat (50%)
+          }
+
+        if (heroRef.current) {
+          new TypeIt(heroRef.current, {
+            speed: 50,
+            startDelay: 900,
+            deleteSpeed: 50,
+          })
+            .type("Building Reliable Digital Solutions", { delay: 100 })
+            .move(-10, { delay: 100 })
+            .pause(200)
+            .delete(7, { delay: 600 }) 
+            .type("Website", { delay: 400 })
+            .pause(200)
+            .delete(7, { delay: 600 }) 
+            .type("Mobile Application", { delay: 225 })
+            .pause(200)
+            .delete(18, { delay: 600 }) 
+            .type("System", { delay: 225 })
+            .pause(200)
+            .delete(6, { delay: 600 }) 
+            .type("Digital", { delay: 225 })
+            .pause(200)
+            .move(null, { to: "END" })
+            .type(" ", { delay: 225 })
+            .go();
+        }
+      }, []);
+
     const swiperRef = useRef(null);
     const handlePrev = () => {
       if (swiperRef.current) swiperRef.current.slidePrev();
@@ -118,27 +155,24 @@ export default function Home() {
             <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
 
             <Section id="home" className="bg-[#f4b033] px-0 pt-20 pb-0">
-                <div className="grid lg:grid-cols-2 items-center gap-12 max-w-7xl mx-auto">
+                <div className="grid lg:grid-cols-2 items-center gap-0 max-w-7xl mx-auto">
                     {/* Text Content */}
-                    <div className="space-y-6 px-10">
-                        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-center md:text-left">
-                            Seemless
-                            Service <br />
-                            <span className="">Solution</span>
+                    <div className="space-y-6 px-5 text-[#fefefe]">
+                        <h1 id='hero' ref={heroRef} className="text-4xl md:text-5xl font-bold leading-tight text-center md:text-left">
                         </h1>
-                        <p className="text-center md:text-left text-sm md:text-xl max-w-xl">
+                        <p className="text-center text-[#fefefe] md:text-left text-lg md:text-xl max-w-xl">
                             We craft exceptional websites, robust systems, and innovative mobile applications that help businesses thrive in the digital landscape.
                         </p>
                         <div className="w-full flex justify-center md:justify-start">
-                            <button className=" bg-orange-500 text-white text-sm md:text-xl px-4 md:px-6 py-2 md:py-4 rounded-xl font-semibold hover:bg-orange-600 transition cursor-pointer">
+                            <button className=" bg-orange-500 text-white text-xl md:text-xl px-4 md:px-6 py-2 md:py-4 rounded-xl font-semibold hover:bg-orange-600 transition cursor-pointer">
                             Get Started
                             </button>
                         </div>
                     </div>
 
                     {/* Hero Image */}
-                    <div className="relative top-13 ml-4 md:ml-0">
-                        <img src="/assets/Header_Lady_(2).png" alt="Hero Illustration" className="max-h-70 md:max-h-110 lg:max-w-full mx-auto mr-22 md:mr-60 lg:mr-45"/>
+                    <div className="relative top-13 ml-4 md:ml-0 max-h-70 overflow-hidden">
+                        <img src="/assets/Header_Lady_(2).png" alt="Hero Illustration" className="max-h-100 md:max-h-110 lg:max-w-full mx-auto right-10 md:mr-60 lg:mr-45"/>
                         <FloatingIcon className="left-[17%] top-[10%] md:left-[16%] md:top-[10%]" delay={0}>
                             <div className='bg-[#FF8345] text-white rotate-20 text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg '>
                                 <i class="ri-star-line"></i>
@@ -174,38 +208,40 @@ export default function Home() {
                         </FloatingIcon>
                     </div>
                 </div>
-                <div className="bg-white w-full mt-9 z-10 slider-container"> 
-                    <div className="slider-track py-7 gap-20 md:gap-40">
-                        <img src="/assets/evos+-logo.png" alt="" className="max-w-15 md:max-w-26"/>
-                        <img src="/assets/arhan-logo.png" alt="" className="max-w-39 md:max-w-50"/>
-                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-39 md:max-w-50"/>
-                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-24 md:max-w-35"/>
+                <div className="bg-white w-full mt-9 pt-5 z-10 slider-container"> 
+                    <div className="slider-track py-7 gap-7 md:gap-40">
+                        <img src="/assets/evos+-logo.png" alt="" className="h-full max-w-15 md:max-w-26 my-auto"/>
+                        <img src="/assets/arhan-logo.png" alt="" className="h-full max-w-39 md:max-w-50 my-auto"/>
+                        <img src="/assets/kongsi-logo.png" alt="" className="h-full max-w-39 md:max-w-50 my-auto"/>
+                        <img src="/assets/hubitat-logo.jpg" alt="" className="h-full max-w-24 md:max-w-35 my-auto"/>
 
-                        <img src="/assets/evos+-logo.png" alt="" className="max-w-15 md:max-w-26"/>
-                        <img src="/assets/arhan-logo.png" alt="" className="max-w-39 md:max-w-50"/>
-                        <img src="/assets/kongsi-logo.png" alt="" className="max-w-39 md:max-w-50"/>
-                        <img src="/assets/hubitat-logo.jpg" alt="" className="max-w-24 md:max-w-35"/>
+                        <img src="/assets/evos+-logo.png" alt="" className="h-full max-w-15 md:max-w-26 my-auto"/>
+                        <img src="/assets/arhan-logo.png" alt="" className="h-full max-w-39 md:max-w-50 my-auto"/>
+                        <img src="/assets/kongsi-logo.png" alt="" className="h-full max-w-39 md:max-w-50 my-auto"/>
+                        <img src="/assets/hubitat-logo.jpg" alt="" className="h-full max-w-24 md:max-w-35 my-auto"/>
 
                         <div style={{ width: '20px', flexShrink: 0 }} aria-hidden="true"></div>
                     </div>
                 </div>
             </Section>
 
-            <Section id="what_we_do" className="py-10 px-10">
+            <Section id="what_we_do" className="py-5 px-5">
                 <div className="container mx-auto md:px-15">
                     <div data-aos="fade-up" className="mb-12">
-                        <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">What we do</h5>
-                        <p className="text-2xl text-center md:text-left font-bold md:max-w-95">We provide the Perfect Solution to your business growth</p>
+                        <h5 className="uppercase text-center md:text-left text-2xl font-bold text-[#F55F1D] mb-4">What we do</h5>
+                        <p className="text-2xl text-center md:text-left text-gray-950 md:max-w-95">We provide the Perfect Solution to your business growth</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div data-aos="fade-up" data-aos-delay="150" className="group border-1 md:border-0 bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
+                        <div data-aos="fade-up" data-aos-delay="150" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                             {/* Ganti dengan ikon sesuai kebutuhan */}
-                            <div className="rounded-2xl bg-[#F5E9D7] w-20 h-20 flex items-center justify-center">
-                                <i class="ri-exchange-funds-fill text-black text-4xl"></i>
+                            <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
+                                <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
+                                    <source src="/assets/chart.webm" type="video/webm" />
+                                </video>
                             </div>
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Grow Your Business</h4>
+                            <h4 className="text-2xl font-semibold text-gray-800 mb-2">Grow Your Business</h4>
                             <p className="text-gray-600 mb-6">We help identify the best ways to improve your business</p>
                             <button href="#" class="group-hover:bg-[#F55F1D] group-hover:text-white p-4 rounded-xl font-normal flex items-center gap-2 hover:gap-3 transition-all cursor-pointer">
                                 Learn More
@@ -214,11 +250,13 @@ export default function Home() {
                                 </div>
                             </button>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="300" className="group border-1 md:border-0 bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
+                        <div data-aos="fade-up" data-aos-delay="300" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                             {/* Ganti dengan ikon sesuai kebutuhan */}
-                            <div className="rounded-2xl bg-[#F5E9D7] w-20 h-20 flex items-center justify-center">
-                                <i class="ri-heart-2-line text-black text-4xl"></i>
+                            <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
+                                <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
+                                    <source src="/assets/love.webm" type="video/webm" />
+                                </video>
                             </div>
                             </div>
                             <h4 className="text-xl font-semibold text-gray-800 mb-2">Improve brand loyalty</h4>
@@ -230,11 +268,13 @@ export default function Home() {
                                 </div>
                             </button>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="450" className="group border-1 md:border-0 bg-white text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
+                        <div data-aos="fade-up" data-aos-delay="450" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                             {/* Ganti dengan ikon sesuai kebutuhan */}
-                            <div className="rounded-2xl bg-[#F5E9D7] w-20 h-20 flex items-center justify-center">
-                                <i class="ri-briefcase-4-line text-black text-4xl"></i>
+                            <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
+                                <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
+                                    <source src="/assets/backpack2.webm" type="video/webm" />
+                                </video>
                             </div>
                             </div>
                             <h4 className="text-xl font-semibold text-gray-800 mb-2">Improve Business Model</h4>
@@ -252,9 +292,11 @@ export default function Home() {
                 
             <Section id="archivement" className='px-0'>
             <div className="bg-[#FDEDD0] py-10 md:py-20 w-full">
-                <div className="max-w-6xl mx-auto px-10 md:px-40 grid grid-cols-2 gap-y-0 gap-10 md:gap-0 md:grid-cols-4 text-center">
-                    <div data-aos="fade-up" data-aos-delay="150" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <i class="ri-file-settings-line text-6xl mb-2"></i>
+                <div className="max-w-6xl mx-auto px-5 md:px-40 grid grid-cols-2 gap-y-0 gap-10 md:gap-0 md:grid-cols-4 text-center">
+                    <div data-aos="fade-up" data-aos-delay="150" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
+                        <video autoPlay loop muted playsInline className='filter brightness-100 max-w-30'>
+                            <source src="/assets/project.webm" type="video/webm" />
+                        </video>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Completed Projects</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">
                         {/* <AnimatedNumbers
@@ -264,18 +306,24 @@ export default function Home() {
                         <CountUp end={4} duration={8} />
                          +</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="300" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <i class="ri-team-line text-6xl mb-2"></i>
+                    <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
+                        <video autoPlay loop muted playsInline className='filter brightness-100 max-w-30'>
+                            <source src="/assets/customer.webm" type="video/webm" />
+                        </video>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Customer Satisfaction</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl"><CountUp end={50} duration={8} delay={1} /> %</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="450"className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <i class="bi bi-cash-coin text-6xl mb-2"></i>
+                    <div data-aos="fade-up" data-aos-delay="450" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
+                        <video autoPlay loop muted playsInline className='filter brightness-0 max-w-30'>
+                            <source src="/assets/money2.webm" type="video/webm" />
+                        </video>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Raised by Clients</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">$<CountUp end={20} duration={8} delay={1} />K</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="600" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <i class="bi bi-calendar2-week text-6xl mb-2"></i>
+                    <div data-aos="fade-up" data-aos-delay="600" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
+                        <video autoPlay loop muted playsInline ref={videoRef} className='filter brightness-100 max-w-30'>
+                            <source src="/assets/calendar2.webm" type="video/webm" />
+                        </video>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Years in Business</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl"><CountUp end={1} duration={8} delay={1} /> yrs</p>
                     </div>
@@ -283,14 +331,14 @@ export default function Home() {
             </div>
             </Section>
 
-            <Section id="our_portfolio" className='px-10 md:px-15'>
+            <Section id="our_portfolio" className='px-5 md:px-15'>
                 <div className="px-0 pt-0 pb-0 md:p-12 md:pb-0 md:pt-0 w-full flex flex-col md:flex-row md:justify-between">
                     <div data-aos="fade-up" data-aos-offset="200" className="mb-12">
-                        <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">Our Portfolio</h5>
-                        <p className="text-2xl text-center md:text-left font-bold max-w-95">We provide the Perfect Solution to your business growth</p>
+                        <h5 className="uppercase text-center md:text-left text-2xl font-bold text-[#F55F1D] mb-4">Our Portfolio</h5>
+                        <p className="text-2xl text-center md:text-left max-w-95">We provide the Perfect Solution to your business growth</p>
                     </div>
                     
-                    <div data-aos="fade-up" data-aos-offset="-100" className="flex justify-center items-end gap-3 mb-5 md:mb-0 md:ml-4 ">
+                    <div data-aos="fade-up" data-aos-offset="200" className="flex justify-center items-end gap-3 mb-5 md:mb-2 md:ml-4 ">
                         <button
                             onClick={handlePrev}
                             className="w-14 h-14 border border-black rounded-full flex items-center justify-center text-xl cursor-pointer"
@@ -325,7 +373,7 @@ export default function Home() {
                     >
                     {portfolioItems.map((item, index) => (
                         <SwiperSlide key={index} className='w-full'>
-                        <div className="space-y-4 border-1 lg:border-0 md:border-0 rounded-2xl py-4 pt-0 px-4 bg-white h-full">
+                        <div className="space-y-4 border-1 border-[#dbdbdb] lg:border-0 md:border-0 rounded-2xl py-4 pt-0 px-4 bg-[#f1f1f1] h-full">
                             <div className='flex items-center rounded-2xl w-full h-60 lg:h-80 lg:p-2 object-cover mx-auto'>
                             <img
                             src={item.image}
@@ -333,10 +381,10 @@ export default function Home() {
                             className="shadow-md max-w-full lg:max-w-full max-h-full lg:max-h-76 pt-2 lg:p-2 rounded-2xl mx-auto"
                             />
                             </div>
-                            <h2 className="text-2xl w-full font-bold text-center">
+                            <h2 className="text-2xl text-gray-800 w-full font-bold text-center">
                             {item.title}
                             </h2>
-                            <p className="text-center w-full md:text-left">{item.description}</p>
+                            <p className="text-center text-lg text-gray-700 w-full md:text-left">{item.description}</p>
                         </div>
                         </SwiperSlide>
                     ))}
@@ -344,8 +392,8 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id="testimoni" className="px-10 md:px-15">
-                <div data-aos="fade-up" data-aos-offset="200" className="flex flex-col md:flex-row justify-between items-center w-full p-12 px-0 pb-4">
+            <Section id="testimoni" className="px-5 md:px-15">
+                <div data-aos="fade-up" data-aos-offset="200" className="flex flex-col md:flex-row justify-between items-center w-full p-12 pt-0 px-0 pb-4">
                     <div>
                         <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">TESTIMONIALS</h5>
                         <p className="text-2xl text-center md:text-left font-semibold max-w-95">
@@ -389,7 +437,7 @@ export default function Home() {
                     >
                         {testimonials.map((t, index) => (
                         <SwiperSlide key={index} className="py-3 px-2 overflow-visible">
-                            <div className="shadow-md rounded-2xl p-6 bg-white h-full">
+                            <div className="shadow-md rounded-2xl border-1 border-gray-300 p-6 bg-[#f1f1f1] h-full">
                                 <p className="text-sm text-gray-700 mb-4">{t.message}</p>
                                 <div className="flex items-center gap-4">
                                     <img
@@ -409,8 +457,8 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id="subscribe" className="px-10 md:px-15">
-                <div className="items-center w-full p-12 px-0 pb-4 mb-30">
+            <Section id="subscribe" className="px-5 md:px-15">
+                <div className="items-center w-full p-12 py-0 px-0 pb-4 mb-30">
                     <div data-aos="fade-up" data-aos-delay="150" className='text-center'>
                         <h5 className="uppercase text-xl font-semibold text-[#F55F1D] mb-4">SUBSCRIBE</h5>
                         <p className="text-lg md:text-4xl font-semibold mb-2">
@@ -440,3 +488,5 @@ export default function Home() {
         </main>
     );
   }
+
+  
