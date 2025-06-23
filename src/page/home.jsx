@@ -120,7 +120,7 @@ export default function Home() {
             <Section id="home" className="bg-[#f4b033] px-0 pt-20 pb-0">
                 <div className="grid lg:grid-cols-2 items-center gap-12 max-w-7xl mx-auto">
                     {/* Text Content */}
-                    <div className="space-y-6 px-15">
+                    <div className="space-y-6 px-10">
                         <h1 className="text-3xl md:text-5xl font-bold leading-tight text-center md:text-left">
                             Seemless
                             Service <br />
@@ -139,7 +139,7 @@ export default function Home() {
                     {/* Hero Image */}
                     <div className="relative top-13 ml-4 md:ml-0">
                         <img src="/assets/Header_Lady_(2).png" alt="Hero Illustration" className="max-h-70 md:max-h-110 lg:max-w-full mx-auto mr-22 md:mr-60 lg:mr-45"/>
-                        <FloatingIcon className="left-[20%] top-[10%]" delay={0}>
+                        <FloatingIcon className="left-[17%] top-[10%] md:left-[16%] md:top-[10%]" delay={0}>
                             <div className='bg-[#FF8345] text-white rotate-20 text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg '>
                                 <i class="ri-star-line"></i>
                             </div>
@@ -165,7 +165,7 @@ export default function Home() {
                             <div className='bg-[#48B774] text-white -rotate-50 text-2xl z-20 w-3 h-3 justify-center items-center flex rounded-sm'></div>
                         </FloatingIcon>
 
-                        <FloatingIcon className="left-[47%] top-[10%]" delay={0}>
+                        <FloatingIcon className="left-[57%] top-[10%] md:left-[47%] md:top-[10%]" delay={0}>
                             <div className='bg-[#FF8345] text-white -rotate-50 text-2xl z-20 w-3 h-3 justify-center items-center flex rounded-sm'></div>
                         </FloatingIcon>
                         
@@ -191,8 +191,8 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id="what_we_do" className="py-10">
-                <div className="container mx-auto px-8 md:px-15">
+            <Section id="what_we_do" className="py-10 px-10">
+                <div className="container mx-auto md:px-15">
                     <div data-aos="fade-up" className="mb-12">
                         <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">What we do</h5>
                         <p className="text-2xl text-center md:text-left font-bold md:max-w-95">We provide the Perfect Solution to your business growth</p>
@@ -252,7 +252,7 @@ export default function Home() {
                 
             <Section id="archivement" className='px-0'>
             <div className="bg-[#FDEDD0] py-10 md:py-20 w-full">
-                <div className="max-w-6xl mx-auto px-20 md:px-40 grid grid-cols-2 gap-y-0 gap-20 md:gap-0 md:grid-cols-4 text-center">
+                <div className="max-w-6xl mx-auto px-10 md:px-40 grid grid-cols-2 gap-y-0 gap-10 md:gap-0 md:grid-cols-4 text-center">
                     <div data-aos="fade-up" data-aos-delay="150" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <i class="ri-file-settings-line text-6xl mb-2"></i>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Completed Projects</h3>
@@ -284,7 +284,7 @@ export default function Home() {
             </Section>
 
             <Section id="our_portfolio" className='px-10 md:px-15'>
-                <div className="px-6 pt-0 pb-0 md:p-12 md:pb-0 md:pt-0 w-full flex flex-col md:flex-row md:justify-between">
+                <div className="px-0 pt-0 pb-0 md:p-12 md:pb-0 md:pt-0 w-full flex flex-col md:flex-row md:justify-between">
                     <div data-aos="fade-up" data-aos-offset="200" className="mb-12">
                         <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">Our Portfolio</h5>
                         <p className="text-2xl text-center md:text-left font-bold max-w-95">We provide the Perfect Solution to your business growth</p>
@@ -344,8 +344,8 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id="testimoni" className="px-4 md:px-15">
-                <div data-aos="fade-up" data-aos-offset="200" className="flex flex-col md:flex-row justify-between items-center w-full p-12 pb-4">
+            <Section id="testimoni" className="px-10 md:px-15">
+                <div data-aos="fade-up" data-aos-offset="200" className="flex flex-col md:flex-row justify-between items-center w-full p-12 px-0 pb-4">
                     <div>
                         <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">TESTIMONIALS</h5>
                         <p className="text-2xl text-center md:text-left font-semibold max-w-95">
@@ -368,7 +368,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="w-full p-12 pt-0 overflow-visible">
+                <div className="w-full p-12 px-0 pt-0 overflow-visible">
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={30}
@@ -409,8 +409,8 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id="subscribe" className="px-4 md:px-15">
-                <div className="items-center w-full p-12 pb-4 mb-30">
+            <Section id="subscribe" className="px-10 md:px-15">
+                <div className="items-center w-full p-12 px-0 pb-4 mb-30">
                     <div data-aos="fade-up" data-aos-delay="150" className='text-center'>
                         <h5 className="uppercase text-xl font-semibold text-[#F55F1D] mb-4">SUBSCRIBE</h5>
                         <p className="text-lg md:text-4xl font-semibold mb-2">
