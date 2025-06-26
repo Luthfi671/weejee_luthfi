@@ -319,7 +319,7 @@ export default function Home() {
                     </div>
                     <div data-aos="fade-up" data-aos-delay="450" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
                         <video autoPlay loop muted playsInline className='filter brightness-0 max-w-30'>
-                            <source src="/assets/centang.webm" type="video/webm" />
+                            <source src="/assets/money3.webm" type="video/webm" />
                         </video>
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Raised by Clients</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">$<CountUp end={20} duration={8} delay={1} />K</p>
