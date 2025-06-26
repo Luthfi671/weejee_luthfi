@@ -99,6 +99,17 @@ export default function Home() {
     const heroRef = useRef(null);
     const videoRef = useRef(null);
 
+    
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        setMenuOpen(false);
+        setShowDropdown(false);
+        }
+        setShowDropdown(false); // Tutup dropdown setelah klik
+    };
+
     useEffect(() => {
 
         if (videoRef.current) {
@@ -152,52 +163,54 @@ export default function Home() {
                 <div className="grid lg:grid-cols-2 items-center gap-0 max-w-7xl mx-auto">
                     {/* Text Content */}
                     <div className="space-y-6 px-5 text-[#fefefe]">
-                        <h1 id='hero' ref={heroRef} className="text-4xl md:text-5xl font-bold leading-tight text-center md:text-left">
-                        </h1>
+                        <div className='relative h-20 md:h-30'>
+                            <h1 id='hero' ref={heroRef} className="absolute md:h-[60px] text-4xl md:text-5xl font-bold leading-tight text-center md:text-left">
+                            </h1>
+                        </div>
                         <p className="text-center text-[#fefefe] md:text-left text-lg md:text-xl max-w-xl">
                             We craft exceptional websites, robust systems, and innovative mobile applications that help businesses thrive in the digital landscape.
                         </p>
                         <div className="w-full flex justify-center md:justify-start">
-                            <button className=" bg-orange-500 text-white text-xl md:text-xl px-4 md:px-6 py-2 md:py-4 rounded-xl font-semibold hover:bg-orange-600 transition cursor-pointer">
+                            <button onClick={() => scrollToSection('what_we_do')} className=" bg-orange-500 text-white text-xl md:text-xl px-4 md:px-6 py-2 md:py-4 rounded-xl font-semibold hover:bg-orange-600 transition cursor-pointer">
                             Get Started
                             </button>
                         </div>
                     </div>
 
                     {/* Hero Image */}
-                    <div className="relative top-13 ml-4 md:ml-0 max-h-70 overflow-hidden">
-                        <img src="/assets/Header_Lady_(2).png" alt="Hero Illustration" className="max-h-100 md:max-h-110 lg:max-w-full mx-auto right-10 md:mr-60 lg:mr-45"/>
-                        <FloatingIcon className="left-[17%] top-[10%] md:left-[16%] md:top-[10%]" delay={0}>
+                    <div className="relative bottom-2 ml-4 mt-10 md:mt-0 md:ml-0 max-h-70 ">
+                        <img src="/assets/Header_Lady_(2).png" alt="Hero Illustration" className="max-h-100 md:max-h-110 lg:max-w-full mx-auto md:mr-25 lg:mr-25"/>
+                        <FloatingIcon className="left-[17%] top-[10%] md:left-[30%] md:top-[10%]" delay={0}>
                             <div className='bg-[#FF8345] text-white rotate-20 text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg '>
                                 <i class="ri-star-line"></i>
                             </div>
                         </FloatingIcon>
 
-                        <FloatingIcon className="left-[60%] top-[20%]" delay={0.5}>
+                        <FloatingIcon className="left-[70%] top-[20%]" delay={0.5}>
                             <div className='bg-[#48B774] text-white  text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg'>
                                 <i class="ri-checkbox-line"></i>
                             </div>
                         </FloatingIcon>
 
-                        <FloatingIcon className="left-[10%] top-[80%]" delay={0.5}>
+                        <FloatingIcon className="left-[27%] top-[80%]" delay={0.5}>
                             <div className='bg-[#48B774] text-white -rotate-50 text-xl md:text-2xl z-20 w-8 h-8 md:w-11 md:h-11 justify-center items-center flex rounded-lg'>
                                 <i class="ri-briefcase-line"></i>
                             </div>
                         </FloatingIcon>
 
-                        <FloatingIcon className="left-[20%] top-[60%]" delay={0}>
+                        <FloatingIcon className="left-[27%] top-[60%]" delay={0}>
                             <div className='bg-[#48B774] text-white -rotate-50 text-2xl z-20 w-3 h-3 justify-center items-center flex rounded-sm'></div>
                         </FloatingIcon>
 
-                        <FloatingIcon className="left-[50%] top-[30%]" delay={0.5}>
+                        <FloatingIcon className="left-[60%] top-[30%]" delay={0.5}>
                             <div className='bg-[#48B774] text-white -rotate-50 text-2xl z-20 w-3 h-3 justify-center items-center flex rounded-sm'></div>
                         </FloatingIcon>
 
-                        <FloatingIcon className="left-[57%] top-[10%] md:left-[47%] md:top-[10%]" delay={0}>
+                        <FloatingIcon className="left-[57%] top-[10%] md:left-[63%] md:top-[10%]" delay={0}>
                             <div className='bg-[#FF8345] text-white -rotate-50 text-2xl z-20 w-3 h-3 justify-center items-center flex rounded-sm'></div>
                         </FloatingIcon>
                         
-                        <FloatingIcon className="left-[10%] top-[4%]" delay={0.5}>
+                        <FloatingIcon className="left-[40%] top-[4%]" delay={0.5}>
                             <div className='bg-[#48B774] text-white -rotate-50 text-2xl z-20 w-3 h-3 justify-center items-center flex rounded-sm'></div>
                         </FloatingIcon>
                     </div>
@@ -329,7 +342,7 @@ export default function Home() {
                         <p className="text-2xl font-bold text-center md:text-left max-w-95">Smart builds. Sleek design. See our work</p>
                     </div>
                     
-                    <div data-aos="fade-up" data-aos-offset="200" className="flex justify-center items-end gap-3 mb-5 md:mb-2 md:ml-4 ">
+                    <div data-aos="fade-up" data-aos-offset="200" className="flex justify-center items-end gap-3 mb-5 md:mb-12 md:ml-4 ">
                         <button
                             onClick={handlePrev}
                             className="w-14 h-14 border border-black rounded-full flex items-center justify-center text-xl cursor-pointer"
@@ -346,6 +359,7 @@ export default function Home() {
                 </div>
                 <div className="w-full md:p-12 md:pt-0 pt-0">
                     <Swiper
+                    className='!items-stretch'
                     modules={[Navigation]}
                     spaceBetween={20}
                     slidesPerView={1}
@@ -363,8 +377,8 @@ export default function Home() {
                     data-aos-offset="200"
                     >
                     {portfolioItems.map((item, index) => (
-                        <SwiperSlide key={index} className='w-full'>
-                        <div className="space-y-4 border-1 border-[#dbdbdb] lg:border-0 md:border-0 rounded-2xl py-4 pt-0 px-4 bg-[#f1f1f1] h-full">
+                        <SwiperSlide key={index} className='w-full h-full flex items-stretch'>
+                        <div className="flex flex-col justify-start min-h-105 md:min-h-125 lg:min-h-100 space-y-4 border-1 border-[#dbdbdb] lg:border-0 md:border-0 rounded-2xl py-4 pt-0 px-4 bg-[#f1f1f1] h-full">
                             <div className='flex items-center rounded-2xl w-full h-60 lg:h-80 lg:p-2 object-cover mx-auto'>
                             <img
                             src={item.image}
@@ -383,7 +397,7 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id="testimoni" className="px-5 md:px-15">
+            <Section id="testimoni" className="px-5 md:px-27">
                 <div data-aos="fade-up" data-aos-offset="200" className="flex flex-col md:flex-row justify-between items-center w-full p-12 pt-0 px-0 pb-4">
                     <div>
                         <h5 className="uppercase text-center md:text-left text-lg font-semibold text-[#F55F1D] mb-4">TESTIMONIALS</h5>
@@ -407,7 +421,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="w-full p-12 px-0 pt-0 overflow-visible">
+                <div className="w-full p-0 overflow-visible">
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={30}
@@ -428,7 +442,7 @@ export default function Home() {
                     >
                         {testimonials.map((t, index) => (
                         <SwiperSlide key={index} className="py-3 px-2 overflow-visible">
-                            <div className="shadow-md rounded-2xl border-1 border-gray-300 p-6 bg-[#f1f1f1] h-full">
+                            <div className="flex flex-col justify-between shadow-md min-h-45 md:min-h-45 rounded-2xl border-1 border-gray-300 p-6 bg-[#f1f1f1] h-full">
                                 <p className="text-sm text-gray-700 mb-4">{t.message}</p>
                                 <div className="flex items-center gap-4">
                                     <img
@@ -449,7 +463,7 @@ export default function Home() {
             </Section>
 
             <Section id="subscribe" className="px-5 md:px-15">
-                <div className="items-center w-full p-12 py-0 px-0 pb-4 mb-30">
+                <div className="items-center w-full p-12 py-0 px-0 pb-4 mb-10">
                     <div data-aos="fade-up" data-aos-delay="150" className='text-center'>
                         <h5 className="uppercase text-xl font-semibold text-[#F55F1D] mb-4">SUBSCRIBE</h5>
                         <p className="text-lg md:text-4xl font-semibold mb-2">
