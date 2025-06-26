@@ -12,15 +12,15 @@ import 'swiper/css/navigation';
 
 const portfolioItems = [
     {
-      title: "Digital Marketing Agency Website",
+      title: "Membership Dashboard",
       description:
-        "This is a website for a client who wants to achieve their goals and meet their users' needs while also increasing their reach across all platforms. This is a website rebrand.",
+        "Your hub, your rules — track, manage, and explore everything in one smart dashboard.",
       image: "/assets/Portofolio/Evos+2.png",
     },
     {
-      title: "E-Commerce Platform",
+      title: "Startup Landing Page",
       description:
-        "A robust platform for selling products with secure payment gateways and inventory management.",
+        "First impressions matter — our startup landing pages spark interest, build trust, and ignite action",
       image: "/assets/Portofolio/kongsiniaga1.png",
     },
     {
@@ -30,9 +30,9 @@ const portfolioItems = [
       image: "/assets/Portofolio/kongsiniaga2.png",
     },
     {
-      title: "Startup Landing Page",
+      title: "Mobile Friendly App",
       description:
-        "A fast, responsive, and beautiful landing page that helps startups acquire users quickly.",
+        "Built for thumbs, made for speed — our apps look sharp and work smooth on any screen",
       image: "/assets/Portofolio/hubitat.png",
     },
   ];
@@ -107,15 +107,11 @@ export default function Home() {
 
         if (heroRef.current) {
           new TypeIt(heroRef.current, {
-            speed: 50,
+            speed: 30,
             startDelay: 900,
-            deleteSpeed: 50,
+            deleteSpeed: 30,
           })
-            .type("Building Reliable Digital Solutions", { delay: 100 })
-            .move(-10, { delay: 100 })
-            .pause(200)
-            .delete(7, { delay: 600 }) 
-            .type("Website", { delay: 400 })
+            .type("Building Reliable Website", { delay: 100 })
             .pause(200)
             .delete(7, { delay: 600 }) 
             .type("Mobile Application", { delay: 225 })
@@ -124,10 +120,8 @@ export default function Home() {
             .type("System", { delay: 225 })
             .pause(200)
             .delete(6, { delay: 600 }) 
-            .type("Digital", { delay: 225 })
-            .pause(200)
+            .type("Digital Solutions ", { delay: 225 })
             .move(null, { to: "END" })
-            .type(" ", { delay: 225 })
             .go();
         }
       }, []);
@@ -229,20 +223,19 @@ export default function Home() {
                 <div className="container mx-auto md:px-15">
                     <div data-aos="fade-up" className="mb-12">
                         <h5 className="uppercase text-center md:text-left text-2xl font-bold text-[#F55F1D] mb-4">What we do</h5>
-                        <p className="text-2xl text-center md:text-left text-gray-950 md:max-w-95">We provide the Perfect Solution to your business growth</p>
+                        <p className="text-2xl font-bold text-center md:text-left text-gray-950 md:max-w-95">We provide all you need to digitalize you bussiness</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         <div data-aos="fade-up" data-aos-delay="150" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
-                            {/* Ganti dengan ikon sesuai kebutuhan */}
-                            <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
-                                <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
-                                    <source src="/assets/chart.webm" type="video/webm" />
-                                </video>
+                                <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
+                                    <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
+                                        <source src="/assets/chart.webm" type="video/webm" />
+                                    </video>
+                                </div>
                             </div>
-                            </div>
-                            <h4 className="text-2xl font-semibold text-gray-800 mb-2">Grow Your Business</h4>
-                            <p className="text-gray-600 mb-6">We help identify the best ways to improve your business</p>
+                            <h4 className="text-2xl font-semibold text-gray-800 mb-2">Tailor Made System</h4>
+                            <p className="text-gray-600 mb-6">Our tailor-made solutions are crafted like a bespoke suit - precise, personal, and built to grow with you</p>
                             <button href="#" class="group-hover:bg-[#F55F1D] group-hover:text-white p-4 rounded-xl font-normal flex items-center gap-2 hover:gap-3 transition-all cursor-pointer">
                                 Learn More
                                 <div class="w-5 h-5 flex items-center justify-center">
@@ -252,15 +245,14 @@ export default function Home() {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="300" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
-                            {/* Ganti dengan ikon sesuai kebutuhan */}
-                            <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
-                                <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
-                                    <source src="/assets/love.webm" type="video/webm" />
-                                </video>
+                                <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
+                                    <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
+                                        <source src="/assets/love.webm" type="video/webm" />
+                                    </video>
+                                </div>
                             </div>
-                            </div>
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Improve brand loyalty</h4>
-                            <p className="text-gray-600 mb-6">We help identify the best ways to improve your business</p>
+                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Reliable Team</h4>
+                            <p className="text-gray-600 mb-6">A team you can trust - dependable, driven, and bursting with ideas</p>
                             <button href="#" class="group-hover:bg-[#F55F1D] group-hover:text-white p-4 rounded-xl font-normal flex items-center gap-2 hover:gap-3 transition-all cursor-pointer">
                                 Learn More
                                 <div class="w-5 h-5 flex items-center justify-center">
@@ -270,15 +262,14 @@ export default function Home() {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="450" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
-                            {/* Ganti dengan ikon sesuai kebutuhan */}
-                            <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
-                                <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
-                                    <source src="/assets/backpack2.webm" type="video/webm" />
-                                </video>
+                                <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
+                                    <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
+                                        <source src="/assets/backpack2.webm" type="video/webm" />
+                                    </video>
+                                </div>
                             </div>
-                            </div>
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Improve Business Model</h4>
-                            <p className="text-gray-600 mb-6">We help identify the best ways to improve your business</p>
+                            <h4 className="text-xl font-semibold text-gray-800 mb-2">24/7 Customer Care</h4>
+                            <p className="text-gray-600 mb-6">Day or night, we're here - real help, real humans, 24/7</p>
                             <button href="#" class="group-hover:bg-[#F55F1D] group-hover:text-white p-4 rounded-xl font-normal flex items-center gap-2 hover:gap-3 transition-all cursor-pointer">
                                 Learn More
                                 <div class="w-5 h-5 flex items-center justify-center">
@@ -335,7 +326,7 @@ export default function Home() {
                 <div className="px-0 pt-0 pb-0 md:p-12 md:pb-0 md:pt-0 w-full flex flex-col md:flex-row md:justify-between">
                     <div data-aos="fade-up" data-aos-offset="200" className="mb-12">
                         <h5 className="uppercase text-center md:text-left text-2xl font-bold text-[#F55F1D] mb-4">Our Portfolio</h5>
-                        <p className="text-2xl text-center md:text-left max-w-95">We provide the Perfect Solution to your business growth</p>
+                        <p className="text-2xl font-bold text-center md:text-left max-w-95">Smart builds. Sleek design. See our work</p>
                     </div>
                     
                     <div data-aos="fade-up" data-aos-offset="200" className="flex justify-center items-end gap-3 mb-5 md:mb-2 md:ml-4 ">
