@@ -46,92 +46,10 @@ const Header = () => {
         </div>
 
         <ul className="hidden md:flex text-white space-x-6 items-center">
-          {/* SERVICES with DROPDOWN */}
-          <li className="relative">
-            <button
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="hover:text-orange-600 flex items-center gap-1 cursor-pointer "
-            >
-              Services <i className="ri-arrow-drop-down-line text-xl"></i>
-            </button>
-
-            <ul ref={dropdownRef} className={`absolute top-full right-0 mt-2 bg-white text-black rounded-lg shadow-lg w-56 z-50 transform transition-all duration-300 ease-out ${
-                showDropdown
-                  ? "opacity-100 translate-y-0 scale-100"
-                  : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-              }`}>
-              {/* LEVEL 1 ITEM 1 */}
-              <li className="relative group">
-                <button
-                  className="w-full text-left px-4 py-2 hover:bg-orange-100 rounded-t-lg flex justify-between items-center cursor-pointer"
-                >
-                  Website Development
-                  <i class="ri-arrow-right-s-line"></i>
-                </button>
-
-                {/* LEVEL 2 DROPDOWN */}
-                <ul className="absolute top-0 ml-2 left-full mt-0 bg-white w-56 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200">
-                  <li>
-                    <button
-                      onClick={() => scrollToSection('frontend')}
-                      className="w-full text-left px-4 py-2 rounded-t-lg hover:bg-orange-100 cursor-pointer"
-                    >
-                      Frontend Development
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      onClick={() => scrollToSection('backend')}
-                      className="w-full text-left px-4 py-2 rounded-b-lg hover:bg-orange-100 cursor-pointer"
-                    >
-                      Backend Development
-                    </button>
-                  </li>
-                </ul>
-              </li>
-
-              {/* LEVEL 1 ITEM 2 */}
-              <li>
-                <button
-                  onClick={() => scrollToSection('what_we_do')}
-                  className="w-full text-left px-4 py-2 hover:bg-orange-100 cursor-pointer"
-                >
-                  What We Do
-                </button>
-              </li>
-
-              {/* LEVEL 1 ITEM 3 */}
-              <li>
-                <button
-                  onClick={() => scrollToSection('archivement')}
-                  className="w-full text-left px-4 py-2 hover:bg-orange-100 rounded-b-lg cursor-pointer"
-                >
-                  Archivement
-                </button>
-              </li>
-
-              {/* LEVEL 1 ITEM 4 */}
-              <li>
-                <button
-                  onClick={() => scrollToSection('our_portfolio')}
-                  className="w-full text-left px-4 py-2 hover:bg-orange-100 rounded-b-lg cursor-pointer"
-                >
-                  Portfolio
-                </button>
-              </li>
-
-              {/* LEVEL 1 ITEM 5 */}
-              <li>
-                <button
-                  onClick={() => scrollToSection('testimoni')}
-                  className="w-full text-left px-4 py-2 hover:bg-orange-100 rounded-b-lg cursor-pointer"
-                >
-                  Testimoni
-                </button>
-              </li>
-            </ul>
-          </li>
-          {/* <li><button onClick={() => scrollToSection('service')} className="hover:text-blue-500">Services <i class="ri-arrow-drop-down-line"></i></button></li> */}
+          <li><button onClick={() => scrollToSection('what_we_do')} className="hover:text-orange-600 cursor-pointer">What We Do</button></li>
+          <li><button onClick={() => scrollToSection('archivement')} className="hover:text-orange-600 cursor-pointer">Archivement</button></li>
+          <li><button onClick={() => scrollToSection('our_portfolio')} className="hover:text-orange-600 cursor-pointer">Portfolio</button></li>
+          <li><button onClick={() => scrollToSection('testimoni')} className="hover:text-orange-600 cursor-pointer">Testimoni</button></li>
           <li><button onClick={() => scrollToSection('subscribe')} className="hover:text-orange-600 cursor-pointer">Subscribe</button></li>
           <li><button onClick={() => scrollToSection('footer')} className="hover:text-orange-600 cursor-pointer">Contact Us</button></li>
         </ul>
