@@ -242,9 +242,11 @@ export default function Home() {
                         <div data-aos="fade-up" data-aos-delay="150" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                                 <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
-                                    <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
-                                        <source src="/assets/chart.webm" type="video/webm" />
-                                    </video>
+                                    <img 
+                                        src="/assets/bar_chart.gif" 
+                                        alt="Animasi backpack" 
+                                        className="max-w-20 invert brightness-0" 
+                                    />
                                 </div>
                             </div>
                             <h4 className="text-2xl font-semibold text-gray-800 mb-2">Tailor Made System</h4>
@@ -259,9 +261,11 @@ export default function Home() {
                         <div data-aos="fade-up" data-aos-delay="300" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                                 <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
-                                    <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
-                                        <source src="/assets/love2.webm" type="video/webm" />
-                                    </video>
+                                    <img 
+                                        src="/assets/jabat_tangan.gif" 
+                                        alt="Animasi backpack" 
+                                        className="max-w-20 invert brightness-0" 
+                                    />
                                 </div>
                             </div>
                             <h4 className="text-xl font-semibold text-gray-800 mb-2">Reliable Team</h4>
@@ -276,9 +280,11 @@ export default function Home() {
                         <div data-aos="fade-up" data-aos-delay="450" className="group border-1 border-[#dbdbdb] md:border-0 bg-[#e9e9e9] text-black p-6 rounded-3xl hover:shadow-[1px_-1px_10px_rgba(0,0,0,0.2)]">
                             <div className="mb-4 text-blue-600">
                                 <div className="rounded-2xl bg-[#F55F1D] w-20 h-20 flex items-center justify-center">
-                                    <video autoPlay loop muted playsInline className='filter brightness-0 invert'>
-                                        <source src="/assets/customer2.webm" type="video/webm" />
-                                    </video>
+                                    <img 
+                                        src="/assets/customer_atas.gif" 
+                                        alt="Animasi backpack" 
+                                        className="max-w-20 invert brightness-0" 
+                                    />
                                 </div>
                             </div>
                             <h4 className="text-xl font-semibold text-gray-800 mb-2">24/7 Customer Care</h4>
@@ -298,9 +304,11 @@ export default function Home() {
             <div className="bg-[#FDEDD0] py-10 md:py-20 w-full">
                 <div className="max-w-6xl mx-auto px-5 md:px-40 grid grid-cols-2 gap-y-0 gap-10 md:gap-0 md:grid-cols-4 text-center">
                     <div data-aos="fade-up" data-aos-delay="150" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <video autoPlay loop muted playsInline className='filter brightness-100 max-w-30'>
-                            <source src="/assets/project.webm" type="video/webm" />
-                        </video>
+                        <img 
+                            src="/assets/calendar_real.gif" 
+                            alt="Animasi backpack" 
+                            className="max-w-30 invert-0 brightness-0" 
+                        />
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Completed Projects</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">
                         {/* <AnimatedNumbers
@@ -311,23 +319,29 @@ export default function Home() {
                          +</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <video autoPlay loop muted playsInline className='filter brightness-100 max-w-30'>
-                            <source src="/assets/customer.webm" type="video/webm" />
-                        </video>
+                        <img 
+                            src="/assets/customer.gif" 
+                            alt="Animasi backpack" 
+                            className="max-w-30" 
+                        />
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Customer Satisfaction</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl"><CountUp end={50} duration={8} delay={1} /> %</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="450" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <video autoPlay loop muted playsInline className='filter brightness-0 max-w-30'>
-                            <source src="/assets/money3.webm" type="video/webm" />
-                        </video>
+                        <img 
+                            src="/assets/duit.gif" 
+                            alt="Animasi backpack" 
+                            className="max-w-30 invert-0 brightness-0" 
+                        />
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Raised by Clients</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl">$<CountUp end={20} duration={8} delay={1} />K</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="600" data-aos-offset="200" className="flex flex-col items-center md:border-r last:border-none border-[#C4C4C480] px-0 md:px-4 py-5 md:py-10">
-                        <video autoPlay loop muted playsInline ref={videoRef} className='filter brightness-0 max-w-30'>
-                            <source src="/assets/calendar3.webm" type="video/webm" />
-                        </video>
+                        <img 
+                            src="/assets/calendar_hitam.gif" 
+                            alt="Animasi backpack" 
+                            className="max-w-30" 
+                        />
                         <h3 className="text-sm font-medium text-gray-800 mb-1">Years in Business</h3>
                         <p className="text-[#F55F1D] font-bold text-xl md:text-3xl"><CountUp end={1} duration={8} delay={1} /> yrs</p>
                     </div>
